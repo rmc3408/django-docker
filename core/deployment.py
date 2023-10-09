@@ -1,5 +1,10 @@
 from .settings import *
 import os
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 SECRET_KEY = os.environ['SECRET']
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
@@ -24,7 +29,7 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder", 
 ]
 
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = 'static/'
 
