@@ -21,12 +21,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATIC_ROOT = 'static'
 
-STATIC_URL = 'static' # look for static inside APPS folder
-
-STATICFILES_DIRS = [
-   'challenges/static', # look outside APPs folder
-   'static'
-]
 
 connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
 params = { code.split('='):code.split('=')[1] for code in connection_string}
