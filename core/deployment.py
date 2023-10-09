@@ -19,7 +19,7 @@ MIDDLEWARE = [
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
