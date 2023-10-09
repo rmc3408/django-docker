@@ -19,12 +19,13 @@ MIDDLEWARE = [
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = 'static'
 
-STATIC_URL = 'static/' # look for static inside APPS folder
+STATIC_URL = 'static' # look for static inside APPS folder
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'), # look outside APPs folder
+   'challenges/static', # look outside APPs folder
+   'static'
 ]
 
 connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
