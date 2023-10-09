@@ -32,7 +32,7 @@ jobs:
 
       # NECESSARY: Add step to run tests here (PyTest, Django test suites, etc.)
       - name: Run collectStatic
-        run: python manage.py collectstatic -l --noinput
+        run: python manage.py collectstatic --noinput
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
