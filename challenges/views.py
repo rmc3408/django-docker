@@ -5,6 +5,7 @@ from django.urls import reverse
 from enum import Enum
 
 
+
 class MontlyAnswersEnum(Enum):
     january = 'Happy new year'
     february = 'Happy Valentines'
