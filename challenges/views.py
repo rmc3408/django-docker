@@ -29,7 +29,7 @@ def monthly(request, month):
         
         # return HttpResponse(MontlyAnswersEnum[month].value)
     except:
-        # raise Http404()
+        # raise Http404() in production
         
         response_stringed = render_to_string('404.html')
         return HttpResponseNotFound(response_stringed)

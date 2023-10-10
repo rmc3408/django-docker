@@ -122,7 +122,6 @@ STATIC_URL = 'static/' # look for static inside APPS folder
 
 STATICFILES_DIRS = [
     BASE_DIR / "static", # look outside APPs folder
-    "/var/www/static/",
 ]
 
 # Default primary key field type
