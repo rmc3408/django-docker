@@ -7,7 +7,7 @@ import sys
 def main():
     """Run administrative tasks."""
 
-    setting_environment = 'core.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'core.settings'
+    setting_environment = 'core.deployment' if 'PRODUCTION' in os.environ else 'core.settings'
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', setting_environment)
     
     # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
